@@ -1,0 +1,37 @@
+<mat-card>
+  <h1>About</h1>
+  <p>
+    This is a sample project built with
+    <a href="https://scully.io">Scully</a> and
+    <a href="https://www.storyblok.com/">Storyblok</a> to showcase how Angular
+    can be utilised in the world of the Jamstack. Leave us a message below.
+  </p>
+
+  <form method="POST" action="https://formspree.io/tamaspiros@yahoo.co.uk">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Your name</mat-label>
+        <input matInput id="name" name="name" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Your email</mat-label>
+        <input matInput id="email" name="_replyTo" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Your message</mat-label>
+        <textarea
+          id="message"
+          name="message"
+          matInput
+        ></textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="primary">Send Message</button>
+    </div>
+  </form>
+</mat-card>

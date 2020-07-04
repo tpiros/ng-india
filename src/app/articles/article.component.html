@@ -1,0 +1,20 @@
+<mat-card ng-if="story" class="article-card">
+  <mat-card-header>
+    <div mat-card-avatar>
+      <img
+        data-tippy-content="Author Name"
+        src="https://res.cloudinary.com/tamas-demo/image/upload/w_50,h_50,c_thumb,g_face,f_auto,q_auto,r_max/tamas.jpg"
+        
+      />
+    </div>
+    <mat-card-title>{{ story.content.title }}</mat-card-title>
+    <mat-card-subtitle>{{ story.tag_list | tagList }}</mat-card-subtitle>
+    <mat-card-subtitle>Written by {{ story.content.author }} at {{ story.published_at | date }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="story.content.hero" />
+  <mat-card-content>
+    <markdown ngPreserveWhitespaces>
+      {{ story.content.body }}
+    </markdown>
+  </mat-card-content>
+</mat-card>

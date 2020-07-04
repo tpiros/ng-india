@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-india';
+  @Output() public sidenavToggle = new EventEmitter();
+  public onToggleSidenav = () => {
+    console.log('clicked');
+    this.sidenavToggle.emit();
+  }
+  author = 'Tamas Piros';
+  footer = `© ${new Date().getFullYear()}. Created by:&nbsp;<a href="https://twitter.com/tpiros">${this.author}<a>`;
 }
